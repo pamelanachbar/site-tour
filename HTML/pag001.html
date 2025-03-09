@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANO</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+</head>
+<body>
+    <div id="imagem-fundo001"></div>
+    <h1 class="texto-aparecer" id="texto">Tour <br> <small>pelo </small>Cotil</h1>
+    <form action="" method="get">
+        <input type="text" name="pesquisa" id="ipesquisa" class="texto-aparecer"  placeholder="Pesquisar" maxlength="40" minlength="2">
+    </form>
+
+    <a href="#" id="link" class="texto-aparecer">FALE CONOSCO</a>
+   
+    <script>
+        setTimeout(function() {
+    document.getElementById("texto").classList.add("visible");
+    document.getElementById('ipesquisa').classList.add("visible")
+    document.getElementById('link').classList.add('visible')
+}, 300);
+    </script>
+    
+</body>
+</html>
