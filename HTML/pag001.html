@@ -9,19 +9,43 @@
 </head>
 <body>
     <div id="imagem-fundo001"></div>
-    <h1 class="texto-aparecer" id="texto">Tour <small>pelo</small> Cotil</h1>
+    <h1 class="texto-aparecer" id="texto"><svg xmlns="http://www.w3.org/2000/svg" height="200px" viewBox="0 -960 960 960" width="200px" fill="#FFFFFF"><path d="M480.09-490q28.91 0 49.41-20.59 20.5-20.59 20.5-49.5t-20.59-49.41q-20.59-20.5-49.5-20.5t-49.41 20.59q-20.5 20.59-20.5 49.5t20.59 49.41q20.59 20.5 49.5 20.5ZM480-159q133-121 196.5-219.5T740-552q0-117.79-75.29-192.9Q589.42-820 480-820t-184.71 75.1Q220-669.79 220-552q0 75 65 173.5T480-159Zm0 79Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>Tour <small></small> Cotil</h1>
+    
     <form action="" method="get">
+        
         <input type="text" name="pesquisa" id="ipesquisa" class="texto-aparecer"  placeholder="Pesquisar" maxlength="40" minlength="2">
     </form>
 
-    <a href="#" id="link" class="texto-aparecer">FALE CONOSCO</a>
+    <a href="#" id="link" class="texto-aparecer">CONHEÇA O TOUR</a>
    
+
+    <div style="background-color: white;" >
+        <p id="paragrafo" class="paragrafoTyping">O COTIL POR DENTRO</p>
+        <p id="textoo" class="paragrafoTyping">Faça um passeio digital através de seu celular ou computador no comforto da sua casa pelo Cotil</p>
+    </div>
+
     <script>
         setTimeout(function() {
     document.getElementById("texto").classList.add("visible");
     document.getElementById('ipesquisa').classList.add("visible")
     document.getElementById('link').classList.add('visible')
 }, 300);
+
+
+// script.js
+window.addEventListener('scroll', () => {
+    const paragrafo = document.getElementById('paragrafo');
+    const rect = paragrafo.getBoundingClientRect();
+    const texto= document.getElementById('textoo');
+    // Verifica se o parágrafo está visível na tela
+    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+        paragrafo.classList.add('visible');
+    }
+    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+        texto.classList.add('visible');
+    }
+});
+
     </script>
     
 </body>
