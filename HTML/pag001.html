@@ -20,29 +20,38 @@
    
 
     <div style="background-color: white;" >
-        <p id="paragrafo" class="paragrafoTyping">O COTIL POR DENTRO</p>
-        <p id="textoo" class="paragrafoTyping">Faça um passeio digital através de seu celular ou computador no comforto da sua casa pelo Cotil</p>
+        <p id="paragrafo" class="paragrafoTyping" >O Cotil por dentro</p>
+        <p id="textoo" class="texto-aparecer">Faça um passeio digital através de seu celular ou computador no comforto da sua casa pelo Cotil</p>
     </div>
 
+
+|
     <script>
         setTimeout(function() {
     document.getElementById("texto").classList.add("visible");
     document.getElementById('ipesquisa').classList.add("visible")
     document.getElementById('link').classList.add('visible')
+
 }, 300);
+
+window.addEventListener('scroll', () => {
+    const descricao = document.getElementById('textoo')
+    const rect = paragrafo.getBoundingClientRect();
+    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+        setTimeout(function(){
+            descricao.classList.add("visible");
+        }, 500)
+    }
+})
 
 
 // script.js
 window.addEventListener('scroll', () => {
     const paragrafo = document.getElementById('paragrafo');
     const rect = paragrafo.getBoundingClientRect();
-    const texto= document.getElementById('textoo');
     // Verifica se o parágrafo está visível na tela
     if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
         paragrafo.classList.add('visible');
-    }
-    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-        texto.classList.add('visible');
     }
 });
 
